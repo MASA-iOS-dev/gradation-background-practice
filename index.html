@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="stylesheet.css">
+   <script src="https://kit.fontawesome.com/f4ecd71f58.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+   <h1>Gradient Animation Background</h1>
+
+   <section class="s1">
+      <p>この背景デザインに必要なプロパティは以下の3つです。</p>
+      <p>body::afterにこれらのアニメーションを付与することで、PCでもスマ―トフォンでも、背景のグラデーションを表現できます。</p>
+      <ol>
+         <li>linear-gradient</li>
+         <li>background-size</li>
+         <li>background-position</li>
+      </ol>
+
+   </section>
+
+   <section class="s2">
+      <div class="flex1">
+         <h2 data-property="1.">linear-gradient</h2>
+         <p>グラデーションを表現する値です。</p>
+         <p>linear-gradient(-60deg, red, blue)</p>
+         <p>のように指定すれば、</p>
+         <p>-60°方向に赤色から青色になるグラデーションを表現できます。</p>
+      </div>
+
+      <div class="flex2">
+         <h2 data-property="2.">background-size</h2>
+         <p>背景サイズの指定プロパティです。</p>
+         <p>background-size: 400% 200%;</p>
+         <p>のように指定すれば、</p>
+         <p>backgroundプロパティによる背景は縦4倍・横2倍のサイズとなります。</p>
+      </div>
+
+      <div class="flex3">
+         <h2 data-property="3.">background-position</h2>
+         <p>背景の表示位置のプロパティです。</p>
+         <p>background-position: 50% 100%</p>
+         <p>のように指定すれば、</p>
+         <p>backgroundプロパティによる背景の左上から横50%縦100%の部分が、その要素の横50%縦100%の部分に来るように表示されます。</p>
+      </div>
+
+   </section>
+
+   <section class="s3">
+      <h2>実際のCSSコード</h2>
+      <p>本ページ背景のCSSを記載しています。</p>
+
+      <div>
+         <pre>
+            html,body{
+               height: 100%
+            }
+
+            body::after{
+               z-index: -1;
+               position: fixed;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               content: "";
+               background: #ee7752;
+               background: -moz-linear-gradient(60deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+               background: -webkit-linear-gradient(120deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+               background: linear-gradient(-60deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+               background-size: 400% 400%;
+               animation: gradient 15s ease-in-out infinite;
+            }
+
+            @keyframes gradient {
+               0% {
+               background-position: 50% 0%
+               }
+               50% {
+               background-position: 50% 100%
+               }
+               100% {
+               background-position: 50% 0%
+               }
+            }
+         </pre>
+      </div>
+   </section>
+
+
+   <footer>
+      <!-- <div>
+         <p class="footer_title">Who made this Page?</p>
+      </div> -->
+
+      <div class="my_profile">
+         <div class="me_img">
+            <img src="profile_gradientAnimationBackground.jpg">
+         </div>
+
+         <div>
+            <p class="name">Miwa</p>
+            <div class="history">
+               <p>WebDesigner's Caffee CEO</p>
+               <p>learnign webdesign for 3 Month </p>
+               <p>NIT 2nd grade student</p>
+            </div>
+            <div class="mail_tell">
+               <p id="mail">m0902masa@gmail.com</p>
+               <p id="tell"><i class="fa-solid fa-phone"></i>090-3939-2966</p>
+            </div>
+
+         </div>
+
+      </div>
+
+      <div class="info">
+         <p>Language...HTML / CSS / JavaScript / PHP / Bootstrap / jQeury</p>
+         <p>WordPress...make and modify</p>
+      </div>
+
+      <div class="profile-lastUpdate">last update : Mar 27th, 2023</div>
+
+
+      <div class="space-getter"></div>
+
+   </footer>
+
+
+</body>
+
+</html>
