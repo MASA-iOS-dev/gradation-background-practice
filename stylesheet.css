@@ -1,5 +1,19 @@
 @charset 'utf-8';
 
+@media screen and (min-width: 1000px){
+   .alertForSmartphone{
+      display:none;
+   }
+}
+
+@media screen and (max-width: 999px){
+   .alertForSmartphone{
+      color: white;
+      font-size: 1.5rem;
+   }
+}
+
+
 /* 固定背景グラデーションのアニメーション等 */
 html,body{
    height: 100%
