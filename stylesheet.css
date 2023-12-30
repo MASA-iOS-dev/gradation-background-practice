@@ -318,15 +318,18 @@ footer{
       margin-bottom: 2rem;
       position: relative;
    }
-   .profile-lastUpdate::after{
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 20rem;
-      height: 1px;
-      border-bottom: 1px solid white;
-   }
+      .profile-lastUpdate::after{
+         content: '';
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 20rem;
+         height: 1px;
+         border-bottom: 1px solid white;
+      }
+      .profile-lastUpdate time{
+         padding-left: 2rem;
+      }
 
 
 
