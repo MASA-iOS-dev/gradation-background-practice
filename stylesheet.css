@@ -202,7 +202,6 @@ footer{
 
    .footer_title{
       padding-top: 4rem;
-      /* margin-left: 2rem; */
       font-size: 3rem;
       text-align: center;
    }
@@ -249,7 +248,7 @@ footer{
          font-style: italic;
       }
       .my_profile .name::after{
-         content: 'Web designer';
+         content: 'Web Developer';
          padding-left: 2.5rem;
          font-size: 1.8rem;
          opacity: .8;
